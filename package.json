@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/readytowin2298/ftth-checker/issues"
   },
-  "homepage": "https://github.com/readytowin2298/ftth-checker#readme"
+  "homepage": "https://github.com/readytowin2298/ftth-checker#readme",
+  "dependencies": {
+    "geo-coordinates-parser": "^1.4.4"
+  }
 }
