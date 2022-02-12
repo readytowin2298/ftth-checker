@@ -1,2 +1,1 @@
-click-log==0.3.2
-lxml==4.7.1
+Shapely==1.8.0
