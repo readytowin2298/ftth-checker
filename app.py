@@ -1,5 +1,5 @@
 from shapely.geometry import Point, Polygon
-
+import matplotlib.pyplot as plt
 
 # script to convert standard coords (i.e. 32°26'37.31"N) to decimal format
 def conversion(old):
@@ -19,9 +19,8 @@ def conversion(old):
     # math to convert coords as [hours, minutes, seconds] to decimal value
     return (float(new[0])+float(new[1])/60.0+float(new[2])/3600.0) * direction[new_dir]
 
-print('Conversion Check', conversion("""32°26'37.31"N"""), conversion("""97° 4'53.41"W"""))
 
-# accepts list of neighborhood coordinates, and a coordinate 
+# accepts list of neighborhood coordinates, and a home coordinate 
 # to see if the coordinate would be contained within the neighborhood
 def ftth_checker(neighborhood, home):
     # initialize list to store decimal coordinates
@@ -35,9 +34,24 @@ def ftth_checker(neighborhood, home):
     # convert coordinates to digital polygon (memory only)
     poly = Polygon(decimal_coords)
 
-    print(poly)
-    print(home_coords)
-    print(home_coords.within(poly))
+    # uncomment below lines to show a visual representation of the coordinates
+    # note, the conversion from spherical data (gps) to flat data (display) is super low-powered,
+    # helpful for troubleshooting only
+    
+
+    """Init display window"""
+    # plt.rcParams["figure.figsize"] = [7.00, 3.50]
+    # plt.rcParams["figure.autolayout"] = True
+
+    """Plot shape"""
+    # x, y = poly.exterior.xy
+    # plt.plot(x, y, c="red")
+
+    """Plot Point"""
+    # plt.scatter([home_coords.x], [home_coords.y], c="blue")
+
+    """Show Plot"""
+    # plt.show()
 
     return home_coords.within(poly)
 
