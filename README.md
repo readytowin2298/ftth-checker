@@ -22,12 +22,16 @@ If you want to see a visual representation of what the program is finding from t
     home = {single coordinate dict}
     ftth_checker(neighborhood, home)
 
-FOR WINDOWS USERS ONLY: I have included a file called setup.bat. Assuming you've already got python and pip installed and
-accessible from the command line, this file will generate the virtual environment needed to house dependancies, activate
-sai virtual envirnment, install aforementioned dependancies, and leave you with a terminal open to the correct directory
-to interact with the code. It can be used anytime you want to play with the code, it only generates the virtual envirnment if one is not already present. You can run test_app.py to ensure that the code is functioning properly, or play with node directly
+FOR WINDOWS OR LINUX USERS: I have included a file called setup.cmd. Assuming you've already got python and pip installed and accessible from the command line, this file will generate the virtual environment needed to house dependancies, activate said virtual envirnment, install aforementioned dependancies, and leave you with a terminal open to the correct directory to interact with the code. It can be used anytime you want to play with the code, it only generates the virtual envirnment if one is not already present. You can run test_app.py to ensure that the code is functioning properly, or play with node directly
 by entering the command "python" and then use imports to gain access to code in the files. Commands to do this look like:
     from some_file_name import some_named_vairable
+
+Linux users hoping to use the setup.cmd will need to open a terminal cd into the directory then run the following commands:
+    chmod +x setup.cmd
+    sh setup.cmd
+Linux users that want to interact further with the code in the command line will need to run:
+    source venv/bin/activate
+    python3
 
 If you have any questions or concerns, please reach out to David Ames either on teams, or at 
 dames@team.nxlink.com.

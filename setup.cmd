@@ -3,6 +3,7 @@
 : # used in system() shell-outs directly in otherwise
 : # portable code. See https://stackoverflow.com/questions/17510688
 : # for details.
+: # Linux users run chmod +x setup.cmd then run sh setup.cmd
 
 :; echo Using Linux? I like you
 :; [ ! -d "/venv" ] && python3 -m venv venv
