@@ -22,6 +22,7 @@
 
 
 @ECHO OFF
+echo Using Windows? That's alright
 echo hi Tim!
 echo %~dp0
 IF NOT EXIST "%~dp0\venv\scripts\activate.bat" (
