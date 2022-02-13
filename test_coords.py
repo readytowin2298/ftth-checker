@@ -1,4 +1,4 @@
-testCoords = [{
+test_neighborhood = [{
 		"lattitude": """32°26'37.31"N""",
 		"longitude": """97° 4'53.41"W"""
 	}, {
@@ -8,4 +8,9 @@ testCoords = [{
 		"lattitude": """32°26'54.25"N""",
 		"longitude": """97° 5'45.96"W"""
 	}]
+
+test_home = {
+	"lattitude" : """ 32°26'37.69"N""",
+	"longitude" : """ 97° 5'27.97"W"""
+}
 
