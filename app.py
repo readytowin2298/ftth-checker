@@ -16,6 +16,14 @@ print(poly)
 print("Is p1 inside the polygon? ", p1.within(poly))
 print("Is p2 inside polygon? ", p2.within(poly))
 
+# script to convert standard coords (i.e. 32°26'37.31"N) to decimal format
+def conversion(old):
+    direction = {'N':1, 'S':-1, 'E': 1, 'W':-1}
+    new = old.replace(u'°',' ').replace('\'',' ').replace('"',' ')
+    new = new.split()
+    new_dir = new.pop()
+    new.extend([0,0,0])
+    return (int(new[0])+int(new[1])/60.0+int(new[2])/3600.0) * direction[new_dir]
 
 
 def ftth_checker(neighborhood, home):
