@@ -1,5 +1,5 @@
 from shapely.geometry import Point, Polygon
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # script to convert standard coords (i.e. 32°26'37.31"N) to decimal format
 def conversion(old):
@@ -36,7 +36,7 @@ def ftth_checker(neighborhood, home):
 
     # uncomment below lines to show a visual representation of the coordinates
     # note, the conversion from spherical data (gps) to flat data (display) is super low-powered,
-    # helpful for troubleshooting only
+    # helpful for troubleshooting only. You'll also need to uncomment the import matplotlib at the top of the file
     
 
     """Init display window"""
